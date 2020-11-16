@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: 'Kumbh Sans', sans-serif;
+
+}
+
+
+.main{
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #19A2AE;
+	position: relative;
+	overflow: hidden;
+}
+.main::before, .main::after{
+	content: "";
+	position:absolute;
+	width: 110%;
+	height: 110%;
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
+	z-index: 0;
+}
+.main:before{
+	background-image: url(images/bg-pattern-top.svg);
+	top: -50%;
+	left: -50%;
+}
+
+.main:after{
+	background-image: url(images/bg-pattern-bottom.svg);
+	bottom: -50%;
+	right: -50%;
+}
+
+
+/*card styling
+*/
+.card{
+	border-radius: 12px;
+	background: #fff;
+	min-width: 330px;
+	height: 50vh;
+	overflow: hidden;
+	position: relative;
+	z-index: 10;
+	box-shadow: 0px 3px 26px -1px rgba(106,111,129,0.75);
+	-webkit-box-shadow: 0px 3px 26px -1px rgba(106,111,129,0.75);
+	-moz-box-shadow: 0px 3px 26px -1px rgba(106,111,129,0.75);
+}
+.card__top{
+	height: 35%;
+	background-image: url(images/bg-pattern-card.svg);
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.card__top__img{
+	position: absolute;
+	bottom: -50%;
+	left: 50%;
+	padding: 5px;
+	background: #FFF;
+	box-sizing: border-box;
+	transform: translateX(-50%);
+	border-radius: 50%;
+}
+.card__top__img img{
+	border-radius: 50%;
+}
+
+.card__body{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 70px;
+	box-sizing: border-box;
+	height: 65%;
+}
+.card__body > div {
+	width: 100%;
+}
+.card__body h1{
+	font-size: 18px;
+	font-weight: 700;
+	color: hsl(229, 23%, 23%);
+}
+.card__body p{
+	color: hsl(0, 0%, 59%);
+	margin-top: 7px;
+}
+.card__body__bio > h1 > span{
+	font-weight: 400;
+	color: hsl(227, 10%, 46%);
+}
+.card__body__bio{
+	text-align: center;
+	padding: 15px 0 20px;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+}
+.card__body__bio > p{
+	font-size: 15px;
+}
+.card__body__sm{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px 0 15px;
+}
+.card__body__sm div{
+	text-align: center;
+}
+.card__body__sm div > p{
+	font-size: 13px;
+}
+
+@media screen and (min-width:1320px ){
+
+	.main:before, .main:after{
+		height: 135%;
+		width: 135%;
+	}
+	.main:before{
+		top: -75%;
+		left: -50%;
+	}
+
+	.main:after{
+		bottom: -85%;
+		right: -50%;
+	}
+}
